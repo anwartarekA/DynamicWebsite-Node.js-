@@ -1,0 +1,42 @@
+[
+    {
+        "name":"Anwar",
+        "age":22,
+        "job":"Engineer",
+        "Department":"Computer and control systems",
+        "borthers":2,
+        "status":true
+    },
+    {
+        "name":"Kareem",
+        "age":22,
+        "job":"Engineer",
+        "Department":"Computer and control systems",
+        "borthers":2,
+        "status":true
+    },
+    {
+        "name":"Belal",
+        "age":22,
+        "job":"Engineer",
+        "Department":"Computer and control systems",
+        "borthers":2,
+        "status":true
+    },
+    {
+        "name":"Tarek",
+        "age":22,
+        "job":"Engineer",
+        "Department":"Computer and control systems",
+        "borthers":2,
+        "status":true
+    },
+    {
+         "name":"Fayza",
+        "age":22,
+        "job":"Engineer",
+        "Department":"Computer and control systems",
+        "borthers":2,
+        "status":true
+    }
+]

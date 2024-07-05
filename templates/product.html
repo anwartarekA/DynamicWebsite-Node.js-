@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Megrim&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <!-- favicon -->
+    <link rel="icon"href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/155/ear-of-maize_1f33d.png"/>
+    <!-- title -->
+    <title>products</title>
+    <style>
+        *,
+        *::before,
+        *::after{
+            margin: 0;
+            padding: 0;
+            box-sizing: inherit;
+        }
+        html
+        {
+            font-size: 62.5%;
+            box-sizing: border-box;
+        }
+        body
+        {
+            background:linear-gradient(to bottom right , #9be15d,  #00e3ae );
+           min-height: 100vh;
+            padding: 0 50px;
+        }
+        .container{
+            margin-top: 6rem;
+            padding: 0 100px;
+        }
+
+         h1{
+            text-align: center;
+            color: white;
+            font-family: Megrim, sans-serif;
+            font-size: 5rem;
+            transform: skewY(-5deg);
+            position: relative;
+        }
+        h1::before
+        {
+            content: '';
+            position: absolute;
+            background: linear-gradient(to bottom, #9be15d, #00e3ae);
+            transform: translate(-50%, -50%);
+            top: 105%;
+            left: 50%;
+            width: 35%;
+            height: 69%;
+            transform: skewY(6deg) translate(-50%, -50%);
+            z-index: -1;
+        }
+        .product{
+            margin: 0 auto;
+            width: 60rem;
+            margin-top: 5rem;
+            margin-bottom: 5rem;
+            background-color: white;
+            position: relative;
+        } 
+        .product-organic{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: linear-gradient(to bottom, #9be15d, #00e3ae);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: white;
+            position: absolute;
+            right: -50px;
+            top: -50px;
+            transform: rotate(15deg);
+            z-index: 2;
+            box-shadow: 0 3rem 8rem 2rem rgba(0, 0, 0, 0.15);
+        }
+        h5{
+            font-weight: 900;
+            font-size: 1.5rem;
+            font-family: sans-serif;
+        }
+        .overview-back:link,
+        .overview-back:visited{
+            text-decoration: none;
+            background-color: white;
+            padding: 5px 15px;
+            border-radius: 10px;
+            border-radius: 100rem;
+            color: #333;
+            font-size: 15px;
+            font-weight: 900;
+            font-family: sans-serif;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 20;
+        }
+        .overview-back:hover{
+            background-color: #9be15d;
+            transition: all 0.5s;
+        }
+        .overview-back .emoji-right{
+            margin-right: 6px;
+        }
+        .emoji-spans{
+            position: relative;
+            background: linear-gradient(to left top, #9be15d, #00e3ae);
+            z-index: 1;
+            overflow: hidden;
+        }
+        .emoji-spans::after{
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: linear-gradient(to left, #9be15d, #00e3ae);
+            z-index: 22;
+            opacity: 0.5;
+        }
+        .emoji-spans span{
+            font-size: 15rem;
+        }
+        .emoji-span-1{
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            z-index: 10;
+        }
+         .emoji-span-2{
+            position: absolute;
+            left: 80px;
+            top: -39px;
+        }
+        .emoji-span-3{
+            position: absolute;
+            left: 186px;
+            top: -57px;
+            z-index: 8;
+        }
+        .emoji-span-4{
+            position: absolute;
+            left: 273px;
+            top: -25px;
+            z-index: 3;
+        }
+        .emoji-span-5{
+            position: absolute;
+            left: 407px;
+            top: -32px;
+            z-index: 12;
+        }
+        .emoji-span-6{
+            position: absolute;
+            left: 52px;
+            top: 50px;
+            z-index: 6;
+        }
+        .emoji-span-7{
+            position: absolute;
+            left: 190px;
+            top: 68px;
+            z-index: 4;
+        }
+        .emoji-span-8{
+            position: absolute;
+            left: 269px;
+            top: 90px;
+            z-index: 5;
+        }
+        .emoji-span-9{
+            position: relative;
+            left: 470px;
+            bottom: -8rem;
+            z-index: 11;
+        }
+        .product-title{
+            background: linear-gradient(to bottom, #9be15d, #00e3ae);
+            padding: 2.8rem;
+        }
+        .product-title h3{
+            font-size: 33px;
+            color: white;
+            text-align: center;
+            font-family: Megrim, sans-serif;
+            letter-spacing: 3px;
+            font-weight: 900;
+        }
+        .product-details{
+            display: flex;
+            flex-wrap: wrap;
+            padding: 25px;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+        .product-details p
+        {
+            width: calc(50% - 20px);
+        }
+        .product-details p .emoji-p{
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        .product-details p .p-description{
+            font-size: 20px;
+            color: #333;
+        }
+        .product-link:link,
+        .product-link:visited
+        {
+            background-color: #79e17b;
+            padding: 20px;
+            transform: scale(1.07) skewX(-20deg);
+            box-shadow: 0 3rem 8rem 2rem rgba(0, 0, 0, 0.15);
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            font-family: sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .product-link:hover
+        {
+            background-color: #9be15d;
+            transform: scale(1.12) skew(-20deg);
+            transition: all 0.5s;
+        }
+        .link-icon{
+            margin-right: 15px;
+        }
+        .product-link .link_desc{
+            transform: skewX(20deg);
+        }
+        .product-description{
+            padding: 40px;
+        }
+        .product-description p{
+            font-size: 1.6rem;
+            line-height: 1.8;
+            color: #333;
+        }
+        .Not_organic{
+            display: none;
+        }
+    </style>
+
+</head>
+<body>
+   <div class="container">
+      <h1>🌽 NODE FARM 🥦</h1>
+      <figure class="product">
+        <div class="product-organic {% not_organic %}">
+            <h5 class="{% not_organic %}">ORGANIC</h5>
+        </div>
+        <a class="overview-back" href="{%overview%}">
+            <span><i class="emoji-right">👈</i>BACK</span>
+        </a>
+        <div class="emoji-spans">
+            <span class="emoji-span-1">{% emoji %}</span>
+            <span class="emoji-span-2">{% emoji %}</span>
+            <span class="emoji-span-3">{% emoji %}</span>
+            <span class="emoji-span-4">{% emoji %}</span>
+            <span class="emoji-span-5">{% emoji %}</span>
+            <span class="emoji-span-6">{% emoji %}</span>
+            <span class="emoji-span-7">{% emoji %}</span>
+            <span class="emoji-span-8">{% emoji %}</span>
+            <span class="emoji-span-9">{% emoji %}</span>
+        </div>
+        <div class="product-title">
+            <h3>{% card_title %}</h3>
+        </div>
+        <div class="product-details">
+            <p>
+                <span class="emoji-p">🌍</span>
+                <span class="p-description">From {% country %}</span>
+            </p>
+            <p>
+                <span class="emoji-p">💓</span>
+                <span class="p-description">{% nutrients %}</span>
+            </p>
+            <p>
+                <span class="emoji-p">📦</span>
+                <span class="p-description">{% quantity %}</span>
+            </p>
+            <p>
+                <span class="emoji-p">🏷</span>
+                <span class="p-description">{% price %}</span>
+            </p>
+        </div>
+        <a href="#" class="product-link">
+            <span class="link-icon">🛒</span>
+            <span class="link_desc">Add to shopping card ({% price %})</span>
+        </a>
+        <div class="product-description">
+            <p> {% description %}</p>
+        </div>
+      </figure>
+   </div>
+</body>
+</html>

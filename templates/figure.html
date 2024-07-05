@@ -1,0 +1,22 @@
+<figure class="card">
+    <div class="card_emoji">{% emoji %}</div>
+    <div class="card_title_box">
+        <h2 class="card_title">{% card_title %}</h2>
+    </div>
+    <div class="card_details">
+
+        <div class="card_detail-box">
+            <h6 class="card__detail card_details--organic {% not_organic %}">Organic!</h6>
+        </div>
+        <div class="card_detail-box">
+            <h6 class="card__detail">{% quantity %}</h6>
+        </div> 
+        <div class="card_detail-box">
+            <h6 class="card__detail card__detail--price">{% price %}</h6>
+        </div>
+
+    </div>
+    <a class="card__link" href="/product?id={% product_id %}">
+        <span>Detail <i class="emoji-right">👉</i></span>
+    </a>
+</figure>
